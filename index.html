@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="javascript.js"></script>
     <title>Calculator app</title>
 </head>
-<body>
+<body class="theme-dark" id="body">
     <div class="container">
         <div class="header">
             <h1 class="heading">calc</h1>
@@ -16,10 +18,9 @@
             <ul>
                 <li>1</li>
                 <li>2</li>
-                <li>3</li>
             </ul>
-            <label id="switch" class="switch">
-                <input type="checkbox" onchange="toggleTheme()" id="slider">
+            <label class="switch">
+                <input type="checkbox" onchange="toggleTheme();" id="slider">
                 <span class="slider round"></span>
             </label>
         </div>
