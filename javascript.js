@@ -6,18 +6,29 @@ if(document.getElementById("body").classList.contains("theme-dark")) {
 }
 }
 
-// var n1 = 1;
-// var n2 = 2;
-// var n3 = 3;
-// var n4 = 4;
-// var n5 = 5;
-// var n6 = 6;
-var n7 = 7;
-// var n8 = 8;
-// var n9 = 9;
-// var n0 = 0;
+var displayNum = '';
+
+function set() {
+    if (displayNum.charAt(0) === '0') {
+        displayNum.slice(-1, 0);
+    }
+    document.getElementById('output').innerHTML = displayNum;
+}
 
 function putNumbers(number) {
-    const display = document.getElementById('output');
-    display.textContent =+ number;
-};
+    displayNum = displayNum + number;
+    set()
+}
+
+function putSign(sign) {
+    displayNum = displayNum + sign;
+    set()
+}
+function removeNum() {
+    displayNum = displayNum.slice(0, -1);
+}
+
+function reset() {
+    displayNum = '0';
+    set();
+}
