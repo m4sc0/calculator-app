@@ -37,8 +37,8 @@
     --key-shadow: hsl(35, 11%, 61%);
 
     /* Font colors */
-    --primary-font: hsl(0, 0%, 100%);
-    --secondary-font: hsl(60, 10%, 19%);
+    --primary-font: hsl(60, 10%, 19%);
+    --secondary-font: hsl(0, 0%, 100%);
 }
 
 /********* Actual CSS *********/
@@ -74,6 +74,12 @@ body {
     left: 0px;
     font-size: 1rem;
     color: var(--secondary-font);
+}
+.theme-light .heading,
+.theme-light .theme,
+.theme-light li,
+.theme-light .output {
+    color: var(--primary-font);
 }
 .theme {
     position: absolute;
@@ -137,7 +143,7 @@ span {
     background-color: var(--tertiary-color);
     border: none;
     outline: none;
-    border-radius: 3px;
+    border-radius: 5px;
 }
 .output {
     text-align: right;
@@ -153,13 +159,13 @@ span {
     background-color: var(--secondary-color);
     border: none;
     outline: none;
-    border-radius: 3px;
+    border-radius: 5px;
 }
 table {
     table-layout: fixed;
     width: 100%;
     height: 100%;
-    padding: 1rem;
+    padding: .75rem;
 }
 .row {
     display: table-row;
@@ -167,15 +173,40 @@ table {
 }
 .cell {
     display: table-cell;
-    background-color: red;
 }
-/* .r5 {
-    width: 100%;
-    height: 100%;
+.cell button {
+    width: 45px;
+    height: 27.5px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 0 var(--key-shadow);
+    background-color: var(--key-bg);
+    font-size: 1rem;
+    color: var(--primary-font);
 }
-.r5 .cell {
-    width: 100%;
-    height: 100%;
-    min-width: 264px;
-    float: left;
+.r1 .c4 button, .r5 .c1 button {
+    background-color: var(--actionkey-bg);
+    box-shadow: 0 2px 0 var(--actionkey-shadow);
+    font-size: .6rem;
+    text-transform: uppercase;
+    color: var(--secondary-font);
+}
+.r5 .c1 button {
+    width: 114px;
+    margin-left: 10px;
+}
+.r5 .c2 button {
+    width: 114px;
+    margin-left: 79px;
+    color: var(--secondary-font);
+    background-color: var(--result-bg);
+    box-shadow: 0 2px 0 var(--result-shadow);
+}
+.cell > button:active {
+    transform: translateY(2px);
+    box-shadow: none;
+}
+/* .r5 .c1 button:active {
+    transform: translateY(2px);
+    box-shadow: none;
 } */
