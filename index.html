@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="javascript.js"></script>
+    <script type="text/javascript" src="javascript.js"></script>
     <title>Calculator app</title>
 </head>
 <body class="theme-dark" id="body">
@@ -25,13 +25,13 @@
             </label>
         </div>
         <div class="screen">
-            <h1 class="output">0</h1>
+            <h1 class="output" id="output">0</h1>
         </div>
         <div class="keypad">
             <table>
                 <tr class="row r1">
-                    <th class="cell c1"><button type="button">7</button></th>
-                    <th class="cell c2"><button type="button">8</button></th>
+                    <th class="cell c1"><button type="button" id="n7" onclick="putNumbers(7)">7</button></th>
+                    <th class="cell c2"><button type="button" id="n8">8</button></th>
                     <th class="cell c3"><button type="button">9</button></th>
                     <th class="cell c4"><button type="button">DEL</button></th>
                 </tr>
@@ -60,5 +60,9 @@
             </table>
         </div>
     </div>
+
+    <script>
+        
+    </script>
 </body>
 </html>
