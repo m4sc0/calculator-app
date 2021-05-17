@@ -65,7 +65,7 @@ body {
     margin-top: -600px;
     position: relative;
     background-color: transparent;
-    transform: scale(2);
+    transform: scale(1.125);
     /* border: 1px solid black; */
 }
 .header {
@@ -216,3 +216,179 @@ table {
     transform: translateY(2px);
     box-shadow: none;
 } */
+
+@media (min-width: 500px) and (max-width: 1920px) {
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Spartan', Arial, Helvetica, sans-serif;
+        outline: none;
+        /* background-color: rgba(255, 0, 0, 0.1); */
+    }
+    body {
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--primary-color);
+        display: grid;
+        place-items: center;
+        transition: 1s;
+        /* transform: scale(1.5); */
+    }
+    .container {
+        width: 300px;
+        height: auto;
+        margin-top: -600px;
+        position: relative;
+        background-color: transparent;
+        transform: scale(1.5);
+        /* border: 1px solid black; */
+    }
+    .header {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .heading {
+        position: absolute;
+        top: 5px;
+        left: 0px;
+        font-size: 1rem;
+        color: var(--secondary-font);
+    }
+    .theme-light .heading,
+    .theme-light .theme,
+    .theme-light li,
+    .theme-light .output {
+        color: var(--primary-font);
+    }
+    .theme {
+        position: absolute;
+        top: 15px;
+        right: 50px;
+        font-size: .4rem;
+        text-transform: uppercase;
+        color: var(--secondary-font);
+    }
+    ul {
+        list-style-type: none;
+        overflow: hidden;
+        position: absolute;
+        top: 1px;
+        right: -5px;
+    }
+    li {
+        float: left;
+        font-size: .5rem;
+        padding-left: 10px;
+        padding-right: 10px;
+        color: var(--secondary-font);
+    }
+    label {
+        position: absolute;
+        top: 7px;
+        right: 0px;
+    }
+    input[type="checkbox"]:not(:checked),
+    input[type="checkbox"]:checked {
+        -webkit-appearance: none;
+        width: 8px;
+        height: 8px;
+        border-radius: 50px;
+        background-color: var(--result-bg);
+        transition: .4s ease-in-out;
+    }
+    input[type="checkbox"]:not(:checked) {
+        margin-right: 28px;
+    }
+    input[type="checkbox"]:checked {
+        margin-right: 4px;
+    }
+    span {
+        position: absolute;
+        top: 4.5px;
+        right: 0px;
+        width: 40px;
+        height: 12px;
+        background-color: var(--secondary-color);
+        z-index: -1;
+        border-radius: 50px;
+    }
+    .screen {
+        position: relative;
+        display: grid;
+        z-index: -1;
+        top: 35px;
+        width: 100%;
+        height: 75px;
+        background-color: var(--tertiary-color);
+        border: none;
+        outline: none;
+        border-radius: 5px;
+    }
+    .output {
+        text-align: right;
+        margin-right: 20px;
+        margin-top: 20px;
+        color: var(--secondary-font);
+    }
+    .keypad {
+        position: absolute;
+        top: 125px;
+        width: 100%;
+        height: 250px;
+        background-color: var(--secondary-color);
+        border: none;
+        outline: none;
+        border-radius: 5px;
+    }
+    table {
+        table-layout: fixed;
+        width: 100%;
+        height: 100%;
+        padding: .75rem;
+    }
+    .row {
+        display: table-row;
+        /* outline: 1px solid black; */
+    }
+    .cell {
+        display: table-cell;
+    }
+    .cell button {
+        width: 45px;
+        height: 27.5px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 2px 0 var(--key-shadow);
+        background-color: var(--key-bg);
+        font-size: 1rem;
+        color: var(--primary-font);
+        cursor: pointer;
+    }
+    .r1 .c4 button, .r5 .c1 button {
+        background-color: var(--actionkey-bg);
+        box-shadow: 0 2px 0 var(--actionkey-shadow);
+        font-size: .6rem;
+        text-transform: uppercase;
+        color: var(--secondary-font);
+    }
+    .r5 .c1 button {
+        width: 114px;
+        margin-left: 10px;
+    }
+    .r5 .c2 button {
+        width: 114px;
+        margin-left: 79px;
+        color: var(--secondary-font);
+        background-color: var(--result-bg);
+        box-shadow: 0 2px 0 var(--result-shadow);
+    }
+    .cell > button:active {
+        transform: translateY(2px);
+        box-shadow: none;
+        box-shadow: 0 -2px 0 var(--key-shadow);
+    }
+    /* .r5 .c1 button:active {
+        transform: translateY(2px);
+        box-shadow: none;
+    } */
+}
