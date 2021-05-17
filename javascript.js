@@ -10,7 +10,7 @@ var displayNum = '';
 
 function set() {
     if (displayNum.charAt(0) === '0') {
-        displayNum.slice(-1, 0);
+        displayNum.slice(1, 0);
     }
     document.getElementById('output').innerHTML = displayNum;
 }
