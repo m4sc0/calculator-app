@@ -187,6 +187,7 @@ table {
     background-color: var(--key-bg);
     font-size: 1rem;
     color: var(--primary-font);
+    cursor: pointer;
 }
 .r1 .c4 button, .r5 .c1 button {
     background-color: var(--actionkey-bg);
@@ -209,6 +210,7 @@ table {
 .cell > button:active {
     transform: translateY(2px);
     box-shadow: none;
+    box-shadow: 0 -2px 0 var(--key-shadow);
 }
 /* .r5 .c1 button:active {
     transform: translateY(2px);
