@@ -7,17 +7,19 @@ if(document.getElementById("body").classList.contains("theme-dark")) {
 }
 
 var displayNum = '';
+var submitState = false;
 
 function set() {
-    if (displayNum.charAt(0) === '0') {
-        displayNum.slice(1, 0);
-    }
     document.getElementById('output').innerHTML = displayNum;
 }
 
 function putNumbers(number) {
-    displayNum = displayNum + number;
-    set()
+    if (submitState === false) {
+        displayNum = displayNum + number;
+        set()
+    } else {
+        reset();
+    }
 }
 
 function putSign(sign) {
@@ -25,10 +27,17 @@ function putSign(sign) {
     set()
 }
 function removeNum() {
-    displayNum = displayNum.slice(0, -1);
+    displayNum = displayNum.substring(0, displayNum.length - 1);
 }
 
 function reset() {
-    displayNum = '0';
+    submitState = false;
+    displayNum = '';
+    document.getElementById('output').innerHTML = '0';
+}
+
+function submit() {
+    submitState = true;
+    displayNum = eval(displayNum);
     set();
 }
